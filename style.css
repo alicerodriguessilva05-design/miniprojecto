@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ==================================================
+CONFIGURAÇÕES GERAIS
+================================================== */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--verde-musgo: #657052;
+--verde-escuro: #3f4b38;
+--verde-claro: #dce3cc;
+
+--rosa: #c98791;
+--rosa-escuro: #a96d77;
+--rosa-claro: #e7b8be;
+--rosa-fundo: #ead4d4;
+
+--creme: #faf5e8;
+--papel: #f5eddd;
+
+--marrom: #756451;
+--dourado: #b29a68;
+
+
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--rosa-fundo);
+
+color: var(--verde-escuro);
+
+font-family: 'Cormorant Garamond', serif;
+
+line-height: 1.7;
+
+overflow-x: hidden;
+
+/* textura rosinha vintage */
+background-image:
+    radial-gradient(
+        rgba(130, 85, 90, 0.10) 1px,
+        transparent 1px
+    ),
+    radial-gradient(
+        rgba(255, 250, 245, 0.55) 1px,
+        transparent 1px
+    );
+
+background-size: 18px 18px, 27px 27px;
+
+
+}
+
+/* ==================================================
+FLORES DECORATIVAS DOS CANTOS
+================================================== */
+
+body::before {
+content: "✿";
+
+position: fixed;
+
+top: 25px;
+left: 25px;
+
+color: var(--rosa-escuro);
+
+opacity: 0.25;
+
+font-size: 55px;
+
+z-index: -1;
+
+transform: rotate(-15deg);
+
+
+}
+
+body::after {
+content: "❀";
+
+position: fixed;
+
+right: 25px;
+bottom: 25px;
+
+color: var(--rosa-escuro);
+
+opacity: 0.25;
+
+font-size: 60px;
+
+z-index: -1;
+
+transform: rotate(15deg);
+
+
+}
+
+/* ==================================================
+CABEÇALHO
+================================================== */
+
+.cabecalho {
+position: relative;
+
+text-align: center;
+
+padding: 80px 25px 70px;
+
+background:
+    linear-gradient(
+        rgba(92, 104, 74, 0.96),
+        rgba(106, 116, 86, 0.96)
+    );
+
+color: var(--creme);
+
+border-bottom: 10px double var(--rosa-claro);
+
+box-shadow:
+    0 8px 25px rgba(65, 65, 50, 0.20);
+
+overflow: hidden;
+
+
+}
+
+/* Flores do cabeçalho */
+
+.cabecalho::before {
+content: "❀";
+
+position: absolute;
+
+top: 20px;
+left: 7%;
+
+font-size: 80px;
+
+color: var(--rosa-claro);
+
+opacity: 0.35;
+
+transform: rotate(-15deg);
+
+
+}
+
+.cabecalho::after {
+content: "✿";
+
+position: absolute;
+
+right: 7%;
+bottom: 15px;
+
+font-size: 85px;
+
+color: var(--rosa-claro);
+
+opacity: 0.35;
+
+transform: rotate(15deg);
+
+
+}
+
+.pequeno-titulo {
+color: var(--rosa-claro);
+
+font-size: 15px;
+
+letter-spacing: 5px;
+
+margin-bottom: 15px;
+
+text-transform: uppercase;
+
+
+}
+
+.cabecalho h1 {
+position: relative;
+
+font-family: 'Playfair Display', serif;
+
+font-size: clamp(3.2rem, 8vw, 6.5rem);
+
+font-weight: 600;
+
+letter-spacing: 3px;
+
+text-shadow:
+    3px 3px 0 rgba(0, 0, 0, 0.13);
+
+margin-bottom: 5px;
+
+
+}
+
+.subtitulo {
+font-size: 1.5rem;
+
+font-style: italic;
+
+color: #f8e9e3;
+
+
+}
+
+.linha-decorativa {
+color: var(--rosa-claro);
+
+font-size: 25px;
+
+margin-top: 22px;
+
+letter-spacing: 3px;
+
+
+}
+
+/* ==================================================
+INTRODUÇÃO
+================================================== */
+
+.introducao {
+position: relative;
+
+max-width: 850px;
+
+margin: 70px auto 50px;
+
+padding: 40px 50px;
+
+text-align: center;
+
+background-color: rgba(250, 245, 232, 0.82);
+
+border: 1px solid rgba(101, 112, 82, 0.35);
+
+box-shadow:
+    0 10px 25px rgba(70, 60, 60, 0.10);
+
+
+}
+
+/* Moldura interna */
+
+.introducao::before {
+content: "";
+
+position: absolute;
+
+inset: 10px;
+
+border: 1px solid var(--rosa-claro);
+
+pointer-events: none;
+
+
+}
+
+/* Ornamento */
+
+.introducao::after {
+content: "❦";
+
+position: absolute;
+
+top: -27px;
+left: 50%;
+
+transform: translateX(-50%);
+
+background-color: var(--rosa-fundo);
+
+padding: 0 15px;
+
+color: var(--rosa-escuro);
+
+font-size: 32px;
+
+
+}
+
+.introducao h2 {
+position: relative;
+
+font-family: 'Playfair Display', serif;
+
+color: var(--verde-musgo);
+
+font-size: 2.6rem;
+
+margin-bottom: 12px;
+
+
+}
+
+.introducao p {
+position: relative;
+
+color: var(--marrom);
+
+font-size: 1.3rem;
+
+max-width: 700px;
+
+margin: auto;
+
+
+}
+
+/* ==================================================
+ÁREA DOS INSETOS
+================================================== */
+
+.insetos {
+width: min(1100px, 90%);
+
+margin: 0 auto 80px;
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 42px;
+
+
+}
+
+/* ==================================================
+CARDS
+================================================== */
+
+.card {
+position: relative;
+
+overflow: hidden;
+
+background-color: var(--creme);
+
+border: 1px solid rgba(101, 112, 82, 0.35);
+
+border-radius: 4px;
+
+box-shadow:
+    0 12px 28px rgba(65, 65, 55, 0.15);
+
+transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+
+}
+
+/* Moldura vintage */
+
+.card::before {
+content: "";
+
+position: absolute;
+
+inset: 9px;
+
+border: 1px solid rgba(201, 135, 145, 0.5);
+
+pointer-events: none;
+
+z-index: 3;
+
+
+}
+
+.card:hover {
+transform:
+translateY(-9px)
+rotate(-0.4deg);
+
+box-shadow:
+    0 22px 40px rgba(65, 65, 55, 0.23);
+
+
+}
+
+/* ==================================================
+IMAGENS
+================================================== */
+
+.card img {
+width: 100%;
+
+height: 310px;
+
+object-fit: cover;
+
+display: block;
+
+filter:
+    sepia(8%)
+    saturate(90%)
+    contrast(95%);
+
+transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+
+
+}
+
+.card:hover img {
+transform: scale(1.04);
+
+filter:
+    sepia(2%)
+    saturate(108%)
+    contrast(100%);
+
+
+}
+
+/* ==================================================
+NÚMEROS
+================================================== */
+
+.numero {
+position: absolute;
+
+top: 18px;
+left: 18px;
+
+z-index: 5;
+
+background-color: var(--rosa);
+
+color: white;
+
+width: 49px;
+height: 49px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border-radius: 50%;
+
+font-family: 'Playfair Display', serif;
+
+font-weight: bold;
+
+border: 3px solid var(--creme);
+
+box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.2);
+
+
+}
+
+/* ==================================================
+CONTEÚDO DOS CARDS
+================================================== */
+
+.conteudo-card {
+position: relative;
+
+padding: 32px 32px 30px;
+
+text-align: center;
+
+
+}
+
+.conteudo-card h2 {
+font-family: 'Playfair Display', serif;
+
+color: var(--verde-musgo);
+
+font-size: 2.3rem;
+
+margin-bottom: 10px;
+
+
+}
+
+.conteudo-card p {
+color: var(--marrom);
+
+font-size: 1.18rem;
+
+
+}
+
+/* Ornamento abaixo do conteúdo */
+
+.conteudo-card::after {
+content: "❦";
+
+display: block;
+
+margin-top: 18px;
+
+color: var(--rosa);
+
+font-size: 23px;
+
+
+}
+
+/* ==================================================
+BOTÕES
+================================================== */
+
+button {
+margin-top: 20px;
+
+padding: 10px 23px;
+
+border: 1px solid var(--verde-musgo);
+
+border-radius: 30px;
+
+background-color: transparent;
+
+color: var(--verde-musgo);
+
+font-family: 'Cormorant Garamond', serif;
+
+font-size: 1.05rem;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+
+
+}
+
+button:hover {
+background-color: var(--rosa);
+
+border-color: var(--rosa);
+
+color: white;
+
+transform: scale(1.04);
+
+
+}
+
+/* ==================================================
+CURIOSIDADES
+================================================== */
+
+.curiosidade {
+margin-top: 18px;
+
+padding: 15px;
+
+border-left: 3px solid var(--rosa);
+
+background-color: #efd8da;
+
+color: var(--verde-escuro) !important;
+
+font-size: 1.05rem !important;
+
+font-style: italic;
+
+display: none;
+
+animation: aparecer 0.4s ease;
+
+
+}
+
+@keyframes aparecer {
+
+from {
+    opacity: 0;
+
+    transform: translateY(-5px);
+}
+
+to {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+}
+
+/* ==================================================
+FRASE FINAL
+================================================== */
+
+.frase-final {
+max-width: 800px;
+
+margin: 20px auto 80px;
+
+padding: 45px 30px;
+
+text-align: center;
+
+
+}
+
+.frase-final h2 {
+font-family: 'Playfair Display', serif;
+
+font-size: 2.5rem;
+
+color: var(--verde-musgo);
+
+font-style: italic;
+
+margin: 15px 0;
+
+
+}
+
+.frase-final p {
+color: var(--marrom);
+
+font-size: 1.2rem;
+
+
+}
+
+/* ==================================================
+RODAPÉ
+================================================== */
+
+footer {
+position: relative;
+
+text-align: center;
+
+padding: 45px 20px;
+
+background-color: var(--verde-musgo);
+
+color: var(--creme);
+
+border-top: 10px double var(--rosa-claro);
+
+font-size: 1.15rem;
+
+overflow: hidden;
+
+
+}
+
+footer::before {
+content: "✿ ❀ ✿ ❀ ✿";
+
+display: block;
+
+color: var(--rosa-claro);
+
+font-size: 20px;
+
+margin-bottom: 15px;
+
+letter-spacing: 7px;
+
+
+}
+
+footer p:first-of-type {
+color: var(--rosa-claro);
+
+font-family: 'Playfair Display', serif;
+
+font-size: 1.5rem;
+
+margin-bottom: 5px;
+
+
+}
+
+/* ==================================================
+CELULAR
+================================================== */
+
+@media (max-width: 700px) {
+
+.cabecalho {
+    padding: 55px 15px 45px;
+}
+
+.cabecalho h1 {
+    font-size: 3rem;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+}
+
+.introducao {
+    width: 90%;
+
+    padding: 35px 25px;
+}
+
+.introducao h2 {
+    font-size: 2rem;
+}
+
+.insetos {
+    grid-template-columns: 1fr;
+
+    width: 92%;
+}
+
+.card img {
+    height: 270px;
+}
+
+.conteudo-card h2 {
+    font-size: 2rem;
+}
+
+.frase-final h2 {
+    font-size: 1.9rem;
+}
+
+
+}
